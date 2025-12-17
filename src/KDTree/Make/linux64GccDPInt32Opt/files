@@ -1,4 +1,0 @@
-
-SOURCE += KDTree.C
-
-LIB = $(FOAM_USER_LIBBIN)/libKDTree
