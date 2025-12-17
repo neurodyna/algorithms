@@ -1,4 +1,3 @@
-```markdown
 # testKDTree
 
 ## Purpose
@@ -14,3 +13,9 @@ The test suite covers:
 
 ```bash
 wmake
+
+## Run
+
+'''bash
+testKDTree
+
