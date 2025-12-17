@@ -33,7 +33,7 @@ List<scalarField> generateUniform
 }
 
 // --------------------------------------------------
-// 2. Clustered Data (Simulates Refined Mesh Zones)
+// 2. Clustered Data
 //    - 20% background noise [0, 1]
 //    - 40% tight cluster at [0.5, 0.5, ...]
 //    - 40% tight cluster at [0.1, 0.1, ...]
@@ -211,7 +211,6 @@ int main(int argc, char *argv[])
 
     {
         // All points are exactly (0.5, 0.5, 0.5).
-        // This tests if the partition algorithm hangs on equal keys.
         List<scalarField> dups = generateDuplicates(10000, 3);
         runTest("Duplicate Points (N=10k)", dups, 1000, 100);
     }
@@ -226,7 +225,6 @@ int main(int argc, char *argv[])
     runTest("Uniform Distribution", uniformPts, 10000, 500);
 
     // Case B: Clustered (Wake simulation)
-    // KD-Trees are sensitive to clusters; this proves adaptation works.
     List<scalarField> clusterPts = generateClustered(rnd, 100000, 3);
     runTest("Clustered/Wake Distribution", clusterPts, 10000, 500);
 
