@@ -3,6 +3,14 @@
 This repository contains **standalone, OpenFOAM-native algorithm implementations**
 intended for reuse in CFD workflows and ML–CFD coupling.
 
+# Important
+
+All code in this repository is intended for research and development use.
+Users are responsible for validating suitability, performance,
+and resource usage in their own environments.
+
+
+
 All algorithms are implemented in **pure OpenFOAM C++ style** and are designed to:
 - Avoid external dependencies
 - Scale to large datasets
